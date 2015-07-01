@@ -1,0 +1,49 @@
+body, html {
+  height: 100%;
+}
+body {
+  display: flex;
+  font-family: Open Sans, sans-serif;
+  flex-flow: column;
+  color: white;
+  background-color: #222;
+  font-size: 20px;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+main h1 {
+  flex: 2;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #33a;
+  margin: 0 0 32px;
+}
+h1 img {
+  height: 256px;
+}
+h1 span {
+  margin: 0 32px;
+}
+main p {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  background-color: #111;
+}
+a {
+  color: white;
+  font-weight: bold;
+}
