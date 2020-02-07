@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 body, html {
   height: 100%;
 }
 body {
   display: flex;
-  font-family: Open Sans, sans-serif;
+  font-family: 'Montserrat', Open Sans, sans-serif;
   flex-flow: column;
   color: white;
   background-color: #222;
@@ -16,34 +18,74 @@ main {
   align-items: stretch;
 }
 main h1 {
-  flex: 2;
+  flex: 3;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: center;
   background-color: #33a;
   margin: 0 0 32px;
+  height: 200px;
 }
-h1 img {
-  height: 256px;
+
+.header-img {
+  width: 20% !important;
 }
+
 h1 span {
+  text-align: center;
   margin: 0 32px;
 }
 main p {
   flex: 1;
   max-width: 800px;
-  margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
 }
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 12px;
   background-color: #111;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 a {
-  color: white;
+  color:white;
   font-weight: bold;
+}
+
+.mobile-header {
+  display: flex;
+  opacity: 0;
+  position: fixed;
+}
+
+@media screen and (max-width: 600px) {
+  .header-img {
+    opacity: 0;
+  }
+  h1 span{
+    opacity: 0;
+  }
+  .mobile-header {
+    height: auto;
+    opacity: 1 !important;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main p {
+    margin-top: -20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-break: 100px;
+  }
+  main h1 {
+    flex: none;
+  }
 }
